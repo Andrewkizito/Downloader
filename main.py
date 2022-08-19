@@ -15,7 +15,7 @@ if response.status_code == 200:
             urls.append(a['href'])
 
     urls.reverse()
-    portion = urls[0:20]
+    portion = urls[0:10]
 
     for key in portion:
         target_file = key.replace(
