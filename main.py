@@ -16,12 +16,11 @@ if response.status_code == 200:
 
     urls.reverse()
     portion = urls[0:20]
-    print(portion)
 
     for key in portion:
         target_file = key.replace(
             "http://tirnaice2th.parsaspace.com/un5gjct7qe8cgqwuecgiecohovq/", "")
-
+        os.system(f"mkdir evil && cd evil")
         try:
             os.system(f"wget {key}")
         except Exception as e:
