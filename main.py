@@ -18,12 +18,12 @@ if response.status_code == 200:
     portion = urls[1:10]
     print(portion)
 
-    # for key in portion:
-    #     target_file = key.replace(
-    #         "http://tirnaice2th.parsaspace.com/un5gjct7qe8cgqwuecgiecohovq/", "")
-    #     os.system(f"mkdir evil && cd evil")
-    #     try:
-    #         os.system(f"wget {key}")
-    #     except Exception as e:
-    #         print(e)
-    #         break
+    os.system(f"mkdir bcs && cd bcs")
+    for key in portion:
+        target_file = key.replace(
+            "http://s3.uupload.ir/files/thisiseasy/vjhwsvcgwfvtujascbytgiouegwoiegwevbwfcfasudycfgauycuylasdcgsuydg/remove/Better.Call.Saul/Btr.C.S.", "")
+        try:
+            os.system(f"wget {key}")
+        except Exception as e:
+            print(e)
+            break
