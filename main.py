@@ -16,14 +16,13 @@ if response.status_code == 200:
 
     urls.reverse()
     portion = urls[0:10]
-    print(portion)
 
-    # os.system(f"mkdir bcs && cd bcs")
-    # for key in portion:
-    #     target_file = key.replace(
-    #         "http://transfer1.parsaspace.com/yvhkvh0q2g7uohuklvh8oplfvbyigv79q2goehkgv7oug/", "")
-    #     try:
-    #         os.system(f"wget {key}")
-    #     except Exception as e:
-    #         print(e)
-    #         break
+    os.system(f"mkdir bcs && cd bcs")
+    for key in portion:
+        target_file = key.replace(
+            "http://transfer1.parsaspace.com/yvhkvh0q2g7uohuklvh8oplfvbyigv79q2goehkgv7oug/", "")
+        try:
+            os.system(f"wget {key}")
+        except Exception as e:
+            print(e)
+            break
