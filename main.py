@@ -11,17 +11,17 @@ if response.status_code == 200:
     urls = []
 
     for a in soup.find_all('a', href=True):
-        if "Btr.C.S.S03E" in a['href']:
+        if "Btr.C.S.S04E" in a['href']:
             urls.append(a['href'])
 
     urls.reverse()
-    portion = urls[1:10]
+    portion = urls[0:10]
     print(portion)
 
     os.system(f"mkdir bcs && cd bcs")
     for key in portion:
         target_file = key.replace(
-            "http://s3.uupload.ir/files/thisiseasy/vjhwsvcgwfvtujascbytgiouegwoiegwevbwfcfasudycfgauycuylasdcgsuydg/remove/Better.Call.Saul/Btr.C.S.", "")
+            "http://transfer1.parsaspace.com/yvhkvh0q2g7uohuklvh8oplfvbyigv79q2goehkgv7oug/", "")
         try:
             os.system(f"wget {key}")
         except Exception as e:
