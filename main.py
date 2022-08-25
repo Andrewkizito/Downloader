@@ -18,6 +18,9 @@ if response.status_code == 200:
     portion = urls[0:9]
     print(portion)
 
+    os.system("mkdir season-2")
+    os.system("cd season-2")
+
     for key in portion:
         try:
             os.system(f"wget {key}")
