@@ -11,11 +11,11 @@ if response.status_code == 200:
     urls = []
 
     for a in soup.find_all('a', href=True):
-        if "S02E0" in a['href']:
+        if "S03E0" in a['href']:
             urls.append(a['href'])
 
     urls.reverse()
-    portion = urls[0:8]
+    portion = urls[0:9]
     print(portion)
 
     for key in portion:
