@@ -15,7 +15,7 @@ if response.status_code == 200:
             urls.append(a['href'])
 
     urls.reverse()
-    portion = urls[0:4]
+    portion = urls[4:8]
     print(portion)
 
     for key in portion:
