@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 
 response = requests.get(
-    "http://www.todaytvseries1.com/tv-series/685-house-of-the-dragon-hbo-max")
+    "http://www.todaytvseries1.com/tv-series/210-better-call-saul-tv1")
 
 if response.status_code == 200:
     data = response.content.decode()
@@ -12,11 +12,10 @@ if response.status_code == 200:
 
 urls = []
 for a in soup.find_all('a', href=True):
-    if "S04E0" in a['href']:
+    if "S05" in a['href'] or "BtrCS.5E" in a['href']:
         urls.append(a['href'])
 
-        urls.reverse()
-        portion = urls[0:9]
+print(urls)
 
 os.system("mkdir files")
 os.system("cd files")
