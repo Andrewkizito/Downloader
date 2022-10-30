@@ -17,5 +17,8 @@ for a in soup.find_all('a', href=True):
 
 print(urls)
 
+os.system("mkdir ~/colony")
+os.system("cd ~/colony")
+
 for key in urls:
     os.system(f"wget {key}")
