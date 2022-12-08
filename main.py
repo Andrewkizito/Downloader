@@ -15,10 +15,10 @@ for a in soup.find_all('a', href=True):
     if "The.Wlk.Ded.S01E" in a['href']:
         urls.append(a['href'])
 
-print(urls)
+my_urls = urls.reverse()
 
 os.system("mkdir ~/the-100")
 os.system("cd ~/the-100")
 
-for key in urls.reverse():
+for key in urls:
     os.system(f"wget {key}")
