@@ -20,5 +20,5 @@ my_urls = urls.reverse()
 os.system("mkdir ~/the-100")
 os.system("cd ~/the-100")
 
-for key in urls:
+for key in my_urls:
     os.system(f"wget {key}")
