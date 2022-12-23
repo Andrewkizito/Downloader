@@ -12,10 +12,11 @@ if response.status_code == 200:
 
 urls = []
 for a in soup.find_all('a', href=True):
-    if "The.Wlk.Ded.S02E" in a['href']:
+    if "The.Wlk.Ded.S03E" in a['href']:
         urls.append(a['href'])
 
 urls.reverse()
+keys = urls[:6]
 
-for key in urls:
+for key in keys:
     os.system(f"wget {key}")
