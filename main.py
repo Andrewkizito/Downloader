@@ -17,7 +17,9 @@ for a in soup.find_all("a", href=True):
         urls.append(a["href"])
 
 urls.reverse()
-keys = urls[6:12]
+keys = urls[12:]
 
-for key in keys:
-    os.system(f"wget {key}")
+print(keys)
+
+# for key in keys:
+#     os.system(f"wget {key}")
